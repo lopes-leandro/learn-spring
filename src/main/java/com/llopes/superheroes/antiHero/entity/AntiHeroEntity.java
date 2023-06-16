@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class AntiHeroEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID, generator = "UUID")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")
     @Column(nullable = false, updatable = false)
     private UUID id;
 

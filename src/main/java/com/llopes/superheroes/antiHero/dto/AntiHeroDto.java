@@ -7,6 +7,7 @@ import lombok.Data;
 
 @Data
 public class AntiHeroDto {
+
     private UUID id;
 
     @NotNull(message = "First Name is required")
