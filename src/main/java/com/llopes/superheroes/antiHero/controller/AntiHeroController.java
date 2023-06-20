@@ -26,7 +26,7 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/v1/anti-heroes")
+@RequestMapping("/api/v1/anti-heroes")
 public class AntiHeroController {
 
     private final ModelMapper mapper;

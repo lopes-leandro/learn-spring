@@ -1,8 +1,11 @@
 package com.llopes.superheroes.antiHero.entity;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
+
+import org.springframework.data.redis.core.RedisHash;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,12 +18,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@RedisHash("AntiHero")
 @Data
 @Entity
 @Table(name = "anti_hero_entity")
 @AllArgsConstructor
 @NoArgsConstructor
-public class AntiHeroEntity {
+public class AntiHeroEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")

@@ -1,23 +1,23 @@
 package com.llopes.superheroes.antiHero.service;
 
 import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.llopes.superheroes.antiHero.entity.AntiHeroEntity;
 import com.llopes.superheroes.antiHero.repository.AntiHeroRepository;
 import com.llopes.superheroes.exception.NotFoundException;
 
-import lombok.AllArgsConstructor;
-
 @Service
-@AllArgsConstructor
 public class AntiHeroService {
 
+    @Autowired
     private final AntiHeroRepository repo;
 
-    // public AntiHeroService(AntiHeroRepository repo) {
-    // this.repo = repo;
-    // }
+    public AntiHeroService(AntiHeroRepository repo) {
+    this.repo = repo;
+    }
 
     public Iterable<AntiHeroEntity> findAllAntiHeroes() {
         return repo.findAll();
